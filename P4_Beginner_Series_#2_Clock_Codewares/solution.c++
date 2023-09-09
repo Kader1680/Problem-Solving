@@ -1,4 +1,4 @@
-// my soltuion-----------------------------------------------------
+// my own soltuion-----------------------------------------------------
 #include <iostream>
 using namespace std;
 int past(int h, int m, int s){
@@ -32,3 +32,15 @@ int past(int h, int m, int s) {
   return 1000*(s + m*60 + h*60*60);
 }
 
+// clever soltuion ---------------------------------------------
+
+
+#include <chrono>
+
+int past(int h, int m, int s) {
+  std::chrono::milliseconds millis{0};
+  millis += std::chrono::hours{h};
+  millis += std::chrono::minutes{m};
+  millis += std::chrono::seconds{s};
+  return millis.count();
+}
