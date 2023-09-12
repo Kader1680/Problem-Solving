@@ -17,3 +17,29 @@ int grow(vector<int> nums) {
 int main(){
     cout<<grow({1, 5, 6, 8});
 }
+
+// other solution for other peaople
+
+// #include <vector>
+// #include <numeric>
+// #include <functional>
+
+// int grow(const std::vector<int>& nums) {
+//   return std::accumulate(nums.cbegin(), nums.cend(), 1, std::multiplies<int>());
+// }
+
+// ----------------------------------------
+
+//#include <numeric>
+// int grow(std::vector<int> v) {
+//   return std::accumulate(v.begin(), v.end(), 1, std::multiplies<>());
+// }
+
+// ----------------------------------------
+
+// #include <vector>
+// int grow(std::vector<int> nums) {
+//   int result = 1;
+//   for(auto x: nums)  result = result * x;
+//   return result;
+// }
