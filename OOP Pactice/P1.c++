@@ -9,53 +9,35 @@
 #include <iostream>
 using namespace std;
 class Shape{
-    private:
-        int width, height;
     public:
-        Shape(){
-            width, height = 0;
-        }
-        void setWidth(int w){
+     int width, height;
+        void setdata(int w, int h){
             width = w;
-        }
-        int getWidth(){
-            return width;
-        }
-        void setHeight(int h){
             height = h;
-        }
-        int getHeight(){
-            return height;
         }
 };
 class Ractangle: public Shape{
-        private:
-        int width, height;
      public:
-       void setWidth(int wR){
-            width = wR;
-        }
-        int getWidth(){
-            return width;
-        }
-        void setHeight(int h){
-            height = h;
-        }
-        int getHeight(){
-            return height;
-        }
-        int area(){
+        float area(){
             return width * height;
         }
 };
+class Triangle : public Shape{
+     public:
+        float area(){
+            return (width * height) / 2;
+        }
+};
 int main() {
-    
+// inizialise the area of reactangle    
 Ractangle r;
-r.setWidth(2);
-r.setHeight(3);
-cout<<"the Area of the reactangle is"<<r.area();
-    return 0;
-}
+r.setdata(2, 4);
+// inizialisz the area of triangle
+Triangle t;
+t.setdata(4, 6);
+cout<<"the Area of the reactangle is "<<r.area()<<endl;
+cout<<"the Area of the triangle is "<<t.area()<<endl;
+    return 
 
 
 
