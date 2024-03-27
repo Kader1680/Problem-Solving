@@ -1,8 +1,6 @@
 // link ==> https://codeforces.com/contest/344
-
 #include <iostream>
 using namespace std;
- 
 int main() {
     string mag;
     int number, count = 1;
